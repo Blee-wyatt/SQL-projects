@@ -1,0 +1,24 @@
+CREATE TABLE nfl_running_backs (
+ id INTEGER PRIMARY KEY,
+ name TEXT,
+ team TEXT,
+ rushing_yards NUMERIC,
+ rushing_touchdowns INTEGER,
+ years_active TEXT
+ );/* Create table about the people and what they do here */
+INSERT INTO nfl_running_backs (id, name, team, rushing_yards, rushing_touchdowns,  years_active)
+VALUES
+(1, 'Emmitt Smith', 'Dallas Cowboys', 18355, 164, '1990-2004'),
+(2, 'Walter Payton', 'Chicago Bears', 16726, 110, '1975-1987'),
+(3, 'Barry Sanders', 'Detroit Lions', 15269, 99, '1989-1998'),
+(4, 'Eric Dickerson', 'Los Angeles Rams', 13259, 90, '1983-1993'),
+(5, 'Jim Brown', 'Cleveland Browns', 12312, 106, '1957-1965'),
+(6, 'Ladainian Tomlinson', 'San Diego Chargers', 13684, 145, '2001-2009'),
+(7, 'Marshall Faulk', 'St.Louis Rams', 12279, 100, '1999-2005'),
+(8, 'Adrian Peterson', 'Minnesota Vikings', 14918, 120, '2007-2016'),
+(9, 'Earl Campbell', 'Houston Oilers', 9407, 74, '1978-1984'),
+(10, 'Marcus Allen', 'Los Angeles Raiders', 12243, 123, '1982-1992');
+SELECT name, team, rushing_yards, rushing_touchdowns, years_active
+FROM nfl_running_backs
+WHERE rushing_yards > 10000 AND rushing_touchdowns > 100
+ORDER BY rushing_yards, rushing_touchdowns;
