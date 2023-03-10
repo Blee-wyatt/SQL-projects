@@ -1,0 +1,24 @@
+CREATE TABLE nike_products(
+id INTEGER PRIMARY KEY,
+product_name TEXT,
+description TEXT,
+price INTEGER,
+release_date TEXT,
+category TEXT
+);
+INSERT INTO nike_products (id, product_name, description, price, release_date, category)
+VALUES
+  (1, 'Nike Air Max 270', 'The Nike Air Max 270 is inspired by two icons of big Air: the Air Max 180 and Air Max 93.', 150.99, '2022-01-01', 'Sneakers'),
+  (2, 'Nike Sportswear Club Fleece', 'The Nike Sportswear Club Fleece Pants feature brushed fleece fabric for all-day comfort and lasting wear.', 45.99, '2022-02-15', 'Activewear'),
+  (3, 'Nike Dri-FIT Men''s Running T-Shirt', 'The Nike Dri-FIT T-Shirt is made with sweat-wicking technology to help keep you dry and comfortable.', 29.99, '2022-03-10', 'Running Apparel');
+
+SELECT * FROM nike_products ORDER BY price;
+
+UPDATE nike_products
+SET price = 159.99
+WHERE id = 1;
+
+DELETE FROM nike_products
+WHERE id = 3;
+
+SELECT * FROM nike_products;
